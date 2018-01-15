@@ -11,3 +11,4 @@ logs
 *.log
 .env
 .env.production
+package-lock.json

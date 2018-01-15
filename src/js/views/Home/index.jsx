@@ -6,12 +6,15 @@ import Styles from '../../../scss/views/home';
 
 import Counter from '../../components/Counter';
 
+import Header from '../../components/Header';
+
 export default class extends Component {
   
   render() {
     return (
       <div>
-        <h1 style={{margin: '0 0 34px'}}>Home</h1>
+        <Header/>
+        {/* <h1 style={{margin: '0 0 34px'}}>Home</h1>
         <div style={{padding: '0 0 24px', margin: '0 0 24px', borderBottom: 'solid 2px #ddd'}}>
           <strong>Redux counter</strong><br />
           <Counter />
@@ -32,7 +35,8 @@ export default class extends Component {
         </div>
         <div style={{padding: '0 0 24px', margin: '0 0 24px', borderBottom: 'solid 2px #ddd'}}>
           <p>Fake API key from .env: <strong>{process.env.FAKE_API_KEY}</strong></p>
-        </div>
+        </div> */}
+
       </div>
     )
   }

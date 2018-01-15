@@ -16,14 +16,11 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
-            <Primary />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route component={NotFound}/>
             </Switch>
-          </div>
         </Router>
       </Provider>
     );
