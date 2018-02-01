@@ -4,16 +4,24 @@ import Alaska from '../../../img/alaska.jpg';
 
 import Styles from '../../../scss/views/home';
 
-import Counter from '../../components/Counter';
+import Counter2 from '../../components/Counter2';
 
 import Header from '../../components/Header';
+
+import Products from '../../components/Products';
 
 export default class extends Component {
   
   render() {
     return (
       <div>
+        
         <Header/>
+        
+        <Products/>
+
+        <Counter2/>
+        
         {/* <h1 style={{margin: '0 0 34px'}}>Home</h1>
         <div style={{padding: '0 0 24px', margin: '0 0 24px', borderBottom: 'solid 2px #ddd'}}>
           <strong>Redux counter</strong><br />

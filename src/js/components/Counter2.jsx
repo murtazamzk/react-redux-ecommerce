@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import {increase, decrease} from '../actions/counter.action';
 
-class Counter extends Component {
+class Counter2 extends Component {
   render() {
     return (
       <div>
@@ -17,4 +17,4 @@ class Counter extends Component {
 export default connect(
     state => ({counter: state.counter}),
     {increase, decrease}
-)(Counter);
+)(Counter2);

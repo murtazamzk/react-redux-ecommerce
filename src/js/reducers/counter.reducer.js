@@ -1,10 +1,10 @@
 import { INCREASE, DECREASE } from '../constants/counter.contant';
 
-const initialState = {
+const initialState2 = {
   count: 0
 };
 
-export default (state = initialState, action) => {
+export default (state = initialState2, action) => {
   switch (action.type) {
     case INCREASE:
       return { ...state, count: state.count + 1 };

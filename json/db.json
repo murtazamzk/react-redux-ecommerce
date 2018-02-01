@@ -3,16 +3,16 @@
         {
             "id":1,
             "name":"product 1",
-            "description":"Test Product",
-            "price": 3000,
-            "image": "google.com"
+            "description":"Sharpie Metallic Permanent Markers",
+            "price": 22,
+            "image": "https://i0.wp.com/www.frostingcrafts.com/wp-content/uploads/2016/12/81D0-BYzhtL._SL1500_.jpg?fit=1500%2C1500&ssl=1"
         },
         {
             "id":2,
             "name":"product 2",
-            "description":"Test Product",
-            "price": 3000,
-            "image": "google.com"
+            "description":"Sharpie Metallic Permanent Markers",
+            "price": 22,
+            "image": "https://i0.wp.com/www.frostingcrafts.com/wp-content/uploads/2016/12/81D0-BYzhtL._SL1500_.jpg?fit=1500%2C1500&ssl=1"
         }
     ]
 }
