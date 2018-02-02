@@ -2,17 +2,43 @@
     "products":[
         {
             "id":1,
-            "name":"product 1",
+            "name":"Sharpie Metallic Permanent Markers",
             "description":"Sharpie Metallic Permanent Markers",
             "price": 22,
+            "featured": false,
             "image": "https://i0.wp.com/www.frostingcrafts.com/wp-content/uploads/2016/12/81D0-BYzhtL._SL1500_.jpg?fit=1500%2C1500&ssl=1"
         },
         {
             "id":2,
-            "name":"product 2",
-            "description":"Sharpie Metallic Permanent Markers",
-            "price": 22,
-            "image": "https://i0.wp.com/www.frostingcrafts.com/wp-content/uploads/2016/12/81D0-BYzhtL._SL1500_.jpg?fit=1500%2C1500&ssl=1"
+            "name":"Masking Tape With Holder",
+            "description":"Masking Tape With Holder",
+            "price": 4.90,
+            "featured": false,
+            "image": "https://cdnimg.webstaurantstore.com/images/products/main/48582/349575/3-masking-tape-dispenser.jpg"
+        },
+        {
+            "id":3,
+            "name":"Menu Rubber Vase",
+            "description":"Menu Rubber Vase",
+            "price": 14.90,
+            "featured": true,
+            "image": "https://www.thegreenhead.com/imgs/rubber-vase-4.jpg"
+        },
+        {
+            "id":4,
+            "name":"Worther Black Mechanical Pencil",
+            "description":"Worther Black Mechanical Pencil",
+            "price": 15,
+            "featured": true,
+            "image": "https://www.pilotfish-images.co.uk/Pens/Worther/Worther-Profil-Aluminium-Mechanical-Pencil-Black-Small.jpg"
+        },
+        {
+            "id":5,
+            "name":"Braun ET 66 Calculator",
+            "description":"braun et66 calculator",
+            "price": 6.40,
+            "featured": true,
+            "image": "https://www.stardust.com/mm5/graphics/00000001/Modern-Design-Dieter-Rams-Braun-ET-66-Calculator-3.jpg"
         }
     ]
 }
