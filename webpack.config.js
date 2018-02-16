@@ -8,6 +8,9 @@ let { resolve } = require('path');
 let webpack = require('webpack');
 let DashboardPlugin = require('webpack-dashboard/plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   
@@ -36,8 +39,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]', 'postcss-loader', 'sass-loader'],
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'postcss-loader',
+            { loader: 'sass-loader', query: { sourceMap: false } }
+          ],
+        }),
       },
       { test: /\.(png|jpg|gif)$/, use: 'url-loader?limit=15000&name=[name]-[hash].[ext]' },
       { test: /\.eot(\?v=\d+.\d+.\d+)?$/, use: 'file-loader' },
@@ -90,7 +100,11 @@ module.exports = {
       inject: 'body',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new DashboardPlugin()
+    new DashboardPlugin(),
+    new ExtractTextPlugin({ filename: 'app-[hash].css', disable: false, allChunks: true }),
+    new CopyWebpackPlugin([
+      {from:`${__dirname}/src/products`,to:'products'} 
+    ]), 
   ]
   
 }

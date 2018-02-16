@@ -1,8 +1,26 @@
-.module {
-  margin: 0 0 0 12px;
-  padding: 3px 18px;
-  font-weight: bold;
-  color: #fff;
-  background: green;
-  display: inline-block
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.product-list{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 800px;
+}
+.product{
+  background: #fff;
+  box-sizing: border-box;
+  margin: 10px;
+  a{
+    opacity: 0.1;
+  }
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width:250px;
+  }
 }

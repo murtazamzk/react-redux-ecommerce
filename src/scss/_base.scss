@@ -40,6 +40,11 @@ input:-webkit-autofill { background-color: transparent !important }
 }
 q { quotes: "“" "”" "‘" "’" }
 
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 //
 // Responsive
 // 
