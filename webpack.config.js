@@ -103,7 +103,8 @@ module.exports = {
     new DashboardPlugin(),
     new ExtractTextPlugin({ filename: 'app-[hash].css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([
-      {from:`${__dirname}/src/products`,to:'products'} 
+      {from:`${__dirname}/src/products`,to:'products'},
+      {from:`${__dirname}/src/img/icons`,to:'img/icons'} 
     ]), 
   ]
   

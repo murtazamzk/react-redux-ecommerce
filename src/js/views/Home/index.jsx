@@ -18,38 +18,6 @@ export default class extends Component {
         
         <Header/>
         <div className="container">
-          <div className="product-list">
-            <div className="product">
-              <a href="javscript:void(0)">Add To Cart</a>
-              <span className="product__price">22</span>
-              <img src="products/sharpie_markers.jpg" alt="sharpie" />
-              <h2 className="product__name">Sharpie Metallic Permanent Markers</h2>
-            </div>
-            <div className="product">
-              <a href="javscript:void(0)">Add To Cart</a>
-              <span className="product__price">22</span>
-              <img src="products/sharpie_markers.jpg" alt="sharpie" />
-              <h2 className="product__name">Sharpie Metallic Permanent Markers</h2>
-            </div>
-            <div className="product featured">
-              <a href="javscript:void(0)">Add To Cart</a>
-              <span className="product__price">22</span>
-              <img src="products/sharpie_markers.jpg" alt="sharpie" />
-              <h2 className="product__name">Sharpie Metallic Permanent Markers</h2>
-            </div>
-            <div className="product">
-              <a href="javscript:void(0)">Add To Cart</a>
-              <span className="product__price">22</span>
-              <img src="products/sharpie_markers.jpg" alt="sharpie" />
-              <h2 className="product__name">Sharpie Metallic Permanent Markers</h2>
-            </div>
-            <div className="product">
-              <a href="javscript:void(0)">Add To Cart</a>
-              <span className="product__price">22</span>
-              <img src="products/sharpie_markers.jpg" alt="sharpie" />
-              <h2 className="product__name">Sharpie Metallic Permanent Markers</h2>
-            </div>
-          </div>
           <Products/>
         </div>
         <Counter2/>

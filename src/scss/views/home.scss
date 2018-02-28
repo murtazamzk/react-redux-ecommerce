@@ -1,3 +1,6 @@
+@import "~variables";
+@import "~respond";
+
 body,
 html {
   position: relative;
@@ -6,26 +9,92 @@ html {
 }
 .product-list{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   grid-auto-flow: dense;
   grid-auto-rows: minmax(250px,auto);
+  @include respond(all-phones) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .product{
   background: #fff;
   box-sizing: border-box;
-  margin: 10px;
-  a{
-    opacity: 0.1;
+  margin: 5px;
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  &__cart{
+    position: absolute;
+    z-index: 3;
+    padding: 10px 20px;
+    transform: translateY(-100%);
+    transition: 0.5s ease 0s;
+    img{
+      width: 28px;
+      margin-top: 4px;
+    }
+    span{
+      color: $primary;
+      margin-left: 15px;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 5px;
+    }
   }
-  img{
+  figure{
+    position: relative;
+    overflow: hidden;
+    width:100%;
+  }
+  &__image{
     display: block;
-    max-width: 100%;
-    height: auto;
-    width:250px;
+    max-width: none;
+    height: 250px;
+    margin: 45px auto 0px;
+  }
+  &__price{
+    position: absolute;
+    color: #fff;
+    width:70px;
+    height: 60px;  
+    background: $primary;
+    top:0px;
+    right:0px;
+    text-align: center;
+    line-height: 60px;
+    z-index: 1;
+  }
+  &__name{
+    position: absolute;
+    bottom: 10px;
+    color:$title;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
   }
   &.featured{
-    grid-column-end: span 2;
-    grid-row-end: span 2;
-    background: #ccc;
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    img{
+      @include respond(all-phones) {
+        height: auto;
+      }
+    }
+    @include respond(all-phones) {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+    }
+  }
+  &:hover{
+    .product__cart{
+      transform: translateY(0);
+    }
+    .product__price{
+      background: $secondary;
+    }
+    .product__name{
+      color: $secondary;
+    }
   }
 }

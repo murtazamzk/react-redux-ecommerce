@@ -8,17 +8,21 @@ class Products extends Component {
     }
     render() {
         return (
-            <div>
-                <ul>
+            <div className="product-list">
                     {
                         this.props.posts.posts &&
                         this.props.posts.posts.map((post,index) => {
                             return (
-                                <li key={index}>{post.name}</li>
+                                // <li key={index}>{post.name}</li>
+                                <div key={index} className={post.featured?"product featured":"product"}>
+                                    <a className="product__cart" href="javscript:void(0)"><img src="img/icons/cart.svg" alt="cart" /><span>Add To Cart</span></a>
+                                    <span className="product__price">{post.price} $</span>
+                                    <figure><img className="product__image" src={"products/"+post.image} alt={post.name} /></figure>
+                                    <h2 className="product__name">{post.name}</h2>
+                                </div>
                             )
                         })
                     }
-                </ul>
             </div>
         )
     }
