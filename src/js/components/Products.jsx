@@ -45,7 +45,7 @@ function fetchProductsWithRedux() {
 }
 
 function fetchProducts() {
-    const URL = "http://localhost:3000/products";
+    const URL = "/products";
     return fetch(URL, { method: 'GET' })
         .then(response => Promise.all([response, response.json()]));
 }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Google from '../../../img/google.png';
-import Alaska from '../../../img/alaska.jpg';
 
 import Styles from '../../../scss/views/home';
 
@@ -11,17 +9,16 @@ import Header from '../../components/Header';
 import Products from '../../components/Products';
 
 export default class extends Component {
-  
+
   render() {
     return (
       <div>
-        
+
         <Header/>
         <div className="container">
           <Products/>
         </div>
-        <Counter2/>
-        
+
         {/* <h1 style={{margin: '0 0 34px'}}>Home</h1>
         <div style={{padding: '0 0 24px', margin: '0 0 24px', borderBottom: 'solid 2px #ddd'}}>
           <strong>Redux counter</strong><br />
@@ -48,5 +45,5 @@ export default class extends Component {
       </div>
     )
   }
-    
+
 }

@@ -9,7 +9,7 @@
     "clean": "rimraf build",
     "lint": "eslint src || true",
     "test": "clear && jest ./tests --setupTestFrameworkScriptFile=raf/polyfill",
-    "dev": "webpack-dashboard -t 'Webpack Dashboard' -- webpack-dev-server",
+    "dev": "nf start -p 3000",
     "build": "npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
     "deploy": "npm run build && cp now.json ./build && now ./build --public --static",
     "alias": "cp now.json ./build && cd ./build && now alias",
@@ -69,6 +69,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "foreman": "^2.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^3.1.3",

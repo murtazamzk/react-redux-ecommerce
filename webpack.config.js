@@ -13,23 +13,23 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  
+
   devtool: 'cheap-module-eval-source-map',
-  
+
   context: resolve(__dirname, 'src'),
-  
+
   entry: [
     'react-hot-loader/patch',
     `webpack-dev-server/client?http://${process.env.NODE_HOST || 'localhost'}:${process.env.NODE_PORT || 8111}`,
     './'
   ],
-  
+
   output: {
     filename: 'app-[hash].js',
     path: resolve(__dirname, 'build'),
     publicPath: '/',
   },
-  
+
   module: {
     rules: [
       {
@@ -56,7 +56,7 @@ module.exports = {
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'url-loader?limit=10000&mimetype=image/svg+xml' }
     ]
   },
-  
+
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
     alias: {
@@ -65,7 +65,7 @@ module.exports = {
       respond: resolve(__dirname, 'src/scss/utils/respond')
     }
   },
-  
+
   devServer: {
     host: process.env.NODE_HOST || 'localhost',
     port: process.env.NODE_PORT || 8111,
@@ -85,9 +85,12 @@ module.exports = {
       version: false,
       warnings: true,
       colors: true
+    },
+    proxy: {
+      '/products': 'http://localhost:3000'
     }
   },
-  
+
   plugins: [
     new Dotenv({
       path: './.env',
@@ -104,8 +107,8 @@ module.exports = {
     new ExtractTextPlugin({ filename: 'app-[hash].css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([
       {from:`${__dirname}/src/products`,to:'products'},
-      {from:`${__dirname}/src/img/icons`,to:'img/icons'} 
-    ]), 
+      {from:`${__dirname}/src/img`,to:'img'}
+    ]),
   ]
-  
+
 }
