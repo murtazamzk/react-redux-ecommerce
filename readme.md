@@ -1,4 +1,3 @@
-# React redux ecommerce boilerplate
+# React redux e-commerce boilerplate
 
-Built with the help of boilerplat - https://github.com/thekeogh/webpack-react-redux
-
+Built with the help of boilerplate - https://github.com/thekeogh/webpack-react-redux
